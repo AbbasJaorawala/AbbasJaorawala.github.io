@@ -1,258 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abbas Jaorawala - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-color: #0a192f; /* Dark tech-themed background */
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      padding: 60px 0;
-      text-align: center;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
-      font-weight: 600;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    header p {
-      margin: 10px 0;
-      font-size: 1.2em;
-      animation: fadeIn 2.5s ease-in-out;
-    }
-
-    header a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-    }
-
-    header a:hover {
-      color: #64ffda; /* Teal color for hover */
-    }
-
-    nav {
-      background-color: #112240; /* Darker tech-themed background */
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #64ffda; /* Teal color for hover */
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #112240; /* Darker tech-themed background */
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-      color: #64ffda; /* Teal color for headings */
-      font-size: 2em;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 50%;
-      height: 3px;
-      background-color: #64ffda; /* Teal color for underline */
-      animation: underline 2s ease-in-out infinite;
-    }
-
-    .skills ul, .experience ul, .education ul, .certifications ul, .projects ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .skills li, .experience li, .education li, .certifications li, .projects li {
-      background-color: #0a192f; /* Dark tech-themed background */
-      margin: 15px 0;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: #ccd6f6; /* Light text color */
-    }
-
-    .skills li:hover, .experience li:hover, .education li:hover, .certifications li:hover, .projects li:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .contact p {
-      margin: 10px 0;
-      color: #ccd6f6; /* Light text color */
-    }
-
-    footer {
-      background-color: #112240; /* Darker tech-themed background */
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-    }
-
-    /* Icons */
-    .icon {
-      font-size: 1.5em;
-      margin-right: 10px;
-      color: #64ffda; /* Teal color for icons */
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes underline {
-      0% { width: 0%; }
-      50% { width: 100%; }
-      100% { width: 0%; }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#0a0f1c">
+    <title>Abbas Jaorawala | Data Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>Abbas Jaorawala</h1>
-    <p>Software Engineer | Data Enthusiast | Problem Solver</p>
-    <p>+91-9630178653 | a.jaorawala53@gmail.com</p>
-    <p>
-      <a href="https://www.linkedin.com/in/abbas-jaorawala-5777b31b0/" target="_blank">
-        <i class="fab fa-linkedin icon"></i>LinkedIn
-      </a>
-      |
-      <a href="#">
-        <i class="fas fa-laptop-code icon"></i>GFG Profile: 500+ Problems Solved
-      </a>
-    </p>
-  </header>
 
-  <nav>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<div class="container">
+    <nav class="topnav" aria-label="Main navigation">
+        <div class="brand">Abbas Jaorawala</div>
+        <!-- Mobile toggle button -->
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
 
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, Java, C++</li>
-      <li><strong>Databases:</strong> MySQL, Snowflake, PostgresDB, Teradata, Oracle</li>
-      <li><strong>Web Development:</strong> Flask, HTML, CSS, JavaScript</li>
-      <li><strong>CI/CD Tools:</strong> Jenkins, TeamCity, GitHub</li>
-      <li><strong>Cloud Platforms:</strong> Azure (Data Engineering, AI Fundamentals), AWS (S3, EC2, Athena, SageMaker, Glue, Lambda)</li>
-    </ul>
-  </section>
+        <div class="nav-links" id="main-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" >Contact</a>
+        </div>
+    </nav>
 
-  <section id="experience" class="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Capgemini</strong> - Software Engineer (DEC 2022 – Present)
-        <ul>
-          <li><strong>Morgan Stanley: Data Governance</strong> - Improved data integrity, regulatory compliance, and data management practices. Developed automation scripts and Tableau dashboards connected with Immuta. <em>Technologies: Python, Hadoop, Snowflake, SQL, Immuta, Tableau, Collibra</em></li>
-          <li><strong>Morgan Stanley: Data Migration</strong> - Migrated large datasets from Teradata to Snowflake, ensuring data quality and consistency. Conducted data validation, cleansing, and deduplication. <em>Technologies: Python, Snowflake, Teradata, Azure, SQL, Git</em></li>
-          <li><strong>Internal: Cost Optimizer (AWS)</strong> - Optimized cloud infrastructure costs within AWS. Developed dashboards using AWS Cost Explorer and Budgets for real-time spending tracking. <em>Technologies: Python (Flask), AWS (Budgets, Trusted Advisor, Athena, S3 bucket, Lambda, PostgreSQL)</em></li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+    <header class="hero" role="banner">
+        <div class="hero-left">
+            <div class="avatar" aria-hidden="true">AJ</div>
+            <div>
+                <h1>Abbas Jaorawala</h1>
+                <p class="subtitle">Data Engineer • ETL • Big Data</p>
+                <p class="lead">I build scalable ETL pipelines, implement data governance, and migrate legacy workloads to modern cloud data platforms.</p>
 
-  <section id="education" class="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>RGPV University</strong> - Bachelor of Technology in Computer Science</li>
-      <li><strong>Minor Project:</strong> Diabetes Detection System</li>
-      <li><strong>Major Project:</strong> Sentiment Analysis of Reviews</li>
-    </ul>
-  </section>
+                <div class="links">
+                    <a href="https://github.com/abbasjaorawala" target="_blank" rel="noopener" class="btn ghost">GitHub</a>
+                    <a href="https://www.linkedin.com/in/abbas-jaorawala-5777b31b0/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
+                    <a href="mailto:a.jaorawala53@gmail.com" class="btn ghost">Email</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <section id="certifications" class="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Microsoft Azure Data Engineer Associate</li>
-      <li>Microsoft Azure Fundamentals</li>
-      <li>Microsoft Azure AI Fundamentals</li>
-      <li>Capgemini Jr Data Engineer-Level 1</li>
-    </ul>
-  </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Data Engineer with 3+ years of experience designing scalable data solutions,
+                optimizing ETL pipelines, and implementing data governance frameworks.
+                Proficient in Python, SQL, Snowflake, Hadoop, PySpark, and cloud platforms (AWS & Azure).
+            </p>
+        </section>
 
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Diabetes Detection System</strong> - Developed a machine learning model to predict diabetes likelihood based on patient data. Implemented data preprocessing, model development, and deployment in a user-friendly application. <em>Technologies: Machine Learning (Classification), Python (Flask), Matplotlib, Pandas, NumPy, Scikit-Learn</em>
-      </li>
-      <li>
-        <strong>Sentiment Analysis of Reviews</strong> - Built an NLP system to classify customer reviews as positive, negative, or neutral. Collected and analyzed large datasets to help businesses improve customer satisfaction. <em>Technologies: NLP, Python (Flask), Scikit-Learn, Matplotlib</em>
-      </li>
-    </ul>
-  </section>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills">
+                <li><span class="badge">Script</span><span class="muted">,Python, SQL, PySpark</span></li>
+                <li><span class="badge">Big Data</span><span class="muted">,Snowflake, Hadoop, Hive</span></li>
+                <li><span class="badge">AWS</span><span class="muted"> (S3, Athena, Glue)</span></li>
+                <li><span class="badge">Azure</span><span class="muted"> (ADF, Databricks)</span></li>
+                <li><span class="badge">Data Governance</span><span class="muted"> (Collibra, Immuta)</span></li>
+                <li><span class="badge">Viz</span><span class="muted"> (Tableau, Power BI)</span></li>
+                <li><span class="badge">CI/CD</span><span class="muted"> (Jenkins, Git)</span></li>
+            </ul>
+        </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out for collaborations, job opportunities, or just a friendly chat!</p>
-    <p><strong>Email:</strong> a.jaorawala53@gmail.com</p>
-    <p>
-      <strong>LinkedIn:</strong> 
-      <a href="https://www.linkedin.com/in/abbas-jaorawala-5777b31b0/" target="_blank">
-        <i class="fab fa-linkedin icon"></i>LinkedIn Profile
-      </a>
-    </p>
-    <p><strong>Phone:</strong> +91-9630178653</p>
-  </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item card">
+                    <h3>Capgemini — Senior Software Engineer (Data Engineering)</h3>
+                    <span class="date">Dec 2022 – Present</span>
+                    <ul>
+                        <li>Built data governance & data quality frameworks (Collibra, Immuta)</li>
+                        <li>Migrated Teradata, fixed-width and Hadoop workloads to Snowflake</li>
+                        <li>Built optimized ETL pipelines with Python & SQL</li>
+                        <li>Automated migration processes and validations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Abbas Jaorawala. All rights reserved.</p>
-  </footer>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article class="project card">
+                    <h3>Diabetes Detection System</h3>
+                    <p>ML model to predict diabetes likelihood using patient data. Built preprocessing, training, and deployment with Flask.</p>
+                    <p class="meta">Python · Flask · Scikit-Learn</p>
+                </article>
+
+                <article class="project card">
+                    <h3>Sentiment Analysis of Reviews</h3>
+                    <p>NLP-based system to classify customer reviews and analyze sentiment trends.</p>
+                    <p class="meta">Python · NLP · Flask</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Microsoft Azure Data Engineer Associate</li>
+                <li>Microsoft Azure Fundamentals</li>
+                <li>Microsoft Azure AI Fundamentals</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to reach out about a role or project, please <a href="mailto:a.jaorawala53@gmail.com">send an email</a> or connect on LinkedIn.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Abbas Jaorawala — Built with care</p>
+    </footer>
+</div>
+
 </body>
 </html>
+<script>
+// Mobile nav toggle
+(function(){
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('main-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+    });
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e){
+        if(!nav.classList.contains('open')) return;
+        if(e.target.closest('.topnav')) return;
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+    });
+})();
+</script>
